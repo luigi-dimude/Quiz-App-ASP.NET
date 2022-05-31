@@ -6,7 +6,7 @@ Designed and developed a full-stack ASP.NET quiz application. Utilizes entity fr
 
 ![2](https://user-images.githubusercontent.com/33835722/171281068-b51d23b8-e447-4e87-a654-0ed59fdc5eab.PNG)
 
-![3](https://user-images.githubusercontent.com/33835722/171281078-5126a392-16c0-4f57-a047-668902daae71.PNG)
+![image](https://user-images.githubusercontent.com/33835722/171281268-d3b2dd6a-fd2c-46a9-b440-69033a8efdbf.png)
 
 ![4](https://user-images.githubusercontent.com/33835722/171281089-678d4272-5441-4486-98c9-aab0e64802b4.PNG)
 
