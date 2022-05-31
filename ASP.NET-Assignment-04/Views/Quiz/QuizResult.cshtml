@@ -1,0 +1,16 @@
+﻿@model ResultsViewModel
+@{
+}
+
+<div class="result">
+    <h1>Results</h1>
+    <br />
+    <p>You got : @Model.CorrectAnswers / @Model.QuestionCount</p>
+    <p>@Model.ResultMessage</p>
+    <br />
+    <br />
+    <div class="resultLinks">
+        <a asp-controller="Home" asp-action="Index">Home</a>
+        <a asp-controller="Score" asp-action="Index" asp-route-quizid="@Model.QuizId">View Scores</a>
+    </div>
+</div>

@@ -1,0 +1,257 @@
+﻿/* Resets */
+body {
+    height: 100vh;
+    font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: calc(10px + 0.33vw);
+    -webkit-font-smoothing: antialiased;
+    color: #F9FFEE;
+    font-weight: 300;
+    background: #222831;
+    overflow: hidden;
+}
+
+
+h1 {
+    font-size: 4.5rem;
+    font-weight: 500;
+    margin-bottom: 0;
+    margin: .2em;
+}
+
+p {
+    font-size: 1.6em;
+    font-weight: 300;
+    line-height: 1.4;
+    max-width: 28em;
+}
+
+textarea:hover,
+input:hover,
+textarea:active,
+input:active,
+textarea:focus,
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active {
+    outline: 0px !important;
+    -webkit-appearance: none;
+    box-shadow: none !important;
+}
+
+
+a {
+    font-size: 2rem;
+    text-decoration: none;
+    color: #F9FFEE;
+    position: relative;
+    font-weight: 300;
+}
+
+    a:after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 60%;
+        left: -0.1em;
+        right: -0.1em;
+        bottom: 0;
+        transition: top 200ms cubic-bezier(0, 0.8, 0.13, 1);
+        background-color: #e49330;
+    }
+
+    a:hover {
+        color: #F9FFEE;
+    }
+
+    a:hover:after {
+        top: 0%;
+        text-decoration: none !important;
+       
+    }
+
+aside a {
+    font-size: 3rem;
+    font-weight: 500;
+}
+ul {
+    list-style-type: none;
+}
+
+ul li {
+        margin: 1em 0;
+    }
+
+
+/* Utilities */
+.full-height {
+    height: 100%;
+}
+
+/* Menu */
+.menu {
+    padding-top: 1em;
+    height: 100%;
+    border-right: 1px solid #DCDCDC;
+}
+
+/*Custom css */
+
+/* Player form */
+.player-form {
+    padding: 2em;
+}
+
+    .player-form .form-control {
+        border: 1px solid #DCDCDC;
+        max-width: 50%;
+        outline: 0;
+        border-bottom: 3px solid #e49330;
+    }
+        .player-form .form-control:hover, .form-control:focus {
+            border-bottom: 3px solid #e49330d7;
+        }
+    .player-form .submitPlayer, .questions button {
+        color: #222831;
+        background: #e49330;
+    }
+        .player-form .submitPlayer:hover, .questions button:hover {
+            background: #e49330d7;
+        }
+.validation-summary-errors ul {
+    padding-left: 0px !important;
+}
+
+/* Question radio button */
+/* Reference: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_custom_radio */
+/* The container */
+.radioContainer {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 1.2em;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+    /* Hide the browser's default radio button */
+    .radioContainer input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.radioContainer:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a yellow background */
+.radioContainer input:checked ~ .checkmark {
+    background-color: #e49330;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radioContainer input:checked ~ .checkmark:after {
+    display: block !important;
+}
+
+/* Style the indicator (dot/circle) */
+.radioContainer .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+.questions {
+    margin-left: 2em;
+}
+    .questions .form-check, .questions p, .questions .btn {
+        margin-left: 2em;
+    }
+
+.questionBtn {
+    margin-left: 4em;
+}
+
+.jumpToQuestion {
+    max-width: 20em;
+}
+.jumpToQuestion button {
+    margin: 1em;
+}
+.jumpToQuestion h3 {
+    margin-left: 1em;
+}
+
+/* Scores */
+#playerTable {
+    margin-top: 4em;
+    background: #e49330;
+}
+
+/* Result */
+.result p, result a {
+    margin-left: 1em;
+}
+
+.result .resultLinks a {
+    margin-left: 1em;
+}
+
+/* Some adjustments to Laptop view */
+@media only screen and (max-width: 1350px) {
+
+    aside a {
+        font-size: 2.2rem;
+        font-weight: 500;
+    }
+    a {
+        font-size: 1.7rem;
+        text-decoration: none;
+        color: #F9FFEE;
+        position: relative;
+        font-weight: 300;
+    }
+    h1 {
+        font-size: 3.5rem;
+        font-weight: 500;
+        margin-bottom: 0;
+        margin: 0.2em;
+    }
+    p {
+        font-size: 1.4em;
+        font-weight: 300;
+        line-height: 1.4;
+        max-width: 28em;
+    }
+
+}

@@ -1,0 +1,65 @@
+﻿@model QuestionViewModel
+@{
+}
+<div class="questions">
+    <h1 class="display-4">Question @(Model.QuestionIndex+1)</h1>
+    <br />
+</div>
+<div class="container-fluid">
+    <form class="row align-items-start"  asp-action="QuestionAnswer" method="post">
+        <div class="col-6">
+            <div class="questions">
+                <p>@Model.Question.Content</p>
+                @for (var i = 0; i < @Model.Options.Count; i++)
+                {
+                    <div class="form-check">
+
+                        @if (@Model.UserAnswer == @Model.Options[i].Content)
+                        {
+                            <label class="radioContainer" for="@(Model.QuestionIndex+""+i)">
+                                @Model.Options[i].Content
+                                <input type="radio" checked="checked" name="userAnswer" value="@Model.Options[i].Content" id="@(Model.QuestionIndex+""+i)" />
+                                <span class="checkmark"></span>
+                            </label>
+                        }
+                        else
+                        {
+                            <label class="radioContainer" for="@(Model.QuestionIndex+""+i)">
+                                @Model.Options[i].Content
+                                <input type="radio" name="userAnswer" value="@Model.Options[i].Content" id="@(Model.QuestionIndex+""+i)" />
+                                <span class="checkmark"></span>
+                            </label>
+                        }
+
+                    </div>
+                }
+                <br />
+                <div class="questionBtn">
+                    @if (Model.QuestionIndex > 0)
+                    {
+                        <button type="submit" class="btn" name="newQuestionNumber" value="@(Model.QuestionIndex-1)">previous</button>
+                    }
+                    @if (Model.QuestionIndex < Model.QuestionCount - 1)
+                    {
+                        <button type="submit" class="btn" name="newQuestionNumber" value="@(Model.QuestionIndex+1)">next</button>
+                    }
+                    @if (Model.QuestionIndex == Model.QuestionCount - 1)
+                    {
+                        <button type="submit" class="btn" name="newQuestionNumber" value="-1">submit</button>
+                    }
+                </div>
+                <input type="hidden" name="questionIndex" value="@Model.QuestionIndex" />
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="questions jumpToQuestion">
+                <h3>Questions</h3>
+                @for (var i = 0; i < @Model.QuestionCount; i++)
+                {
+                    <button type="submit" class="btn" name="newQuestionNumber" value="@(i)">@(i+1)</button>
+                }
+            </div>
+        </div>
+    </form>
+</div>
+

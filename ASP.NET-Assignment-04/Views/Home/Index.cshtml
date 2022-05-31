@@ -1,0 +1,17 @@
+﻿@model List<Quiz>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>@ViewBag.Header</h1>
+<div>
+    <ul class="quiz">
+        @foreach (var quiz in @Model)
+        {
+            <li>
+                <a asp-controller="@ViewBag.Action" asp-action="Index" asp-route-quizId="@quiz.QuizId">@quiz.Name</a>
+                <p>@quiz.Description</p>
+            </li>
+        }
+    </ul>
+</div>
